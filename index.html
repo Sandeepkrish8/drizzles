@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>intern prjts</title>
+</head>
+<body>
+    <section class="sec">
+        <div class="text">
+            <h1 id="h1">MONSOON</h1>
+            <p> <q>A monsoon is a seasonal change in the direction of the prevailing, or strongest, winds of a region. Monsoons cause wet and dry seasons throughout much of the tropics.</q></p>
+            <button class="btn" onclick="createRain()">Drizzle</button>
+        </div>
+    </section>
+
+    <section class="abt">
+        <h1><u>ABOUT-US</u></h1>
+        <div class="abt-us">
+            <p id="para"><span> monsoon (/mɒnˈsuːn/) is traditionally a seasonal reversing wind accompanied by corresponding changes in precipitation[1] but is now used to describe seasonal changes in atmospheric circulation and precipitation associated with annual latitudinal oscillation of the Intertropical Convergence Zone (ITCZ) between its limits to the north and south of the equator. Usually, the term monsoon is used to refer to the rainy phase of a seasonally changing pattern, although technically there is also a dry phase. The term is also sometimes used to describe locally heavy but short-term rains.</span></p>
+            <button class="ok">KNOW-MORE</button>
+        </div>
+    </section>
+    <div class="rain"></div>
+    <script>
+        function createRain() {
+            const rainContainer = document.querySelector('.rain');
+            for (let i = 0; i < 100; i++) {
+                const drop = document.createElement('div');
+                drop.classList.add('drop');
+                drop.style.left = `${Math.random() * 100}vw`;
+                drop.style.animationDuration = `${Math.random() * 0.5 + 0.5}s`;
+                drop.style.animationDelay = `${Math.random() * 2}s`;
+                rainContainer.appendChild(drop);
+            }
+        
+        }
+    </script>
+</body>
+</html>
